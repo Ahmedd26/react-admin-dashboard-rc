@@ -1,0 +1,70 @@
+@import "../../styles/_variables.scss";
+
+.home {
+  display: flex;
+  flex-direction: column;
+  .widgets,
+  .charts {
+    display: flex;
+    padding: 24px;
+    gap: 24px;
+  }
+  .charts {
+    padding: 5px 20px;
+  }
+  .list-container {
+    -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+    padding: 24px;
+    margin: 24px;
+    background-color: $secondaryBackgroundColorLight;
+    border-radius: $mainBorderRadius;
+
+    .list-title {
+      color: $mainFontColorLight;
+      font-family: $bebas;
+      font-size: 26px;
+      font-weight: lighter;
+      font-weight: 500;
+      margin-bottom: 15px;
+    }
+    .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+      background-color: $mainBackgroundColorLight;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      table {
+        thead {
+          tr {
+            th {
+              font-size: 24px;
+              font-weight: lighter;
+              text-align: start;
+              font-family: $bebas;
+              color: $mainBackgroundColorLight;
+              background-color: $mainFontColorLight;
+            }
+          }
+        }
+        tbody {
+          tr {
+            transition: $transition;
+            td {
+              color: $mainFontColorLight;
+              transition: $transition;
+              font-size: 14px;
+            }
+            &:nth-child(even) {
+              background-color: $secondaryBackgroundColorLight;
+            }
+            &:hover {
+              background-color: $mainFontColorHoverLight;
+              td {
+                color: $mainBackgroundColorLight;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

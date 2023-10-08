@@ -1,0 +1,31 @@
+@import "../styles/variables";
+@import "../styles/functions";
+html,
+body {
+  height: 100%;
+}
+.app {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $mainBackgroundColorLight;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $mainFontColorLight;
+  }
+  ::selection {
+    background-color: $mainFontColorLight;
+    color: $secondaryBackgroundColorLight;
+  }
+  .sidebar {
+    grid-column: span 2;
+  }
+  .content {
+    grid-column: span 10;
+    background-color: $mainBackgroundColorLight;
+  }
+}

@@ -1,0 +1,104 @@
+@import "../../styles/_variables.scss";
+
+.notifications {
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  color: $mainFontColorLight;
+  background-color: $secondaryBackgroundColorLight;
+  border-radius: $mainBorderRadius;
+  border: $mainBorderLight;
+
+  .top {
+    padding-bottom: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    font-size: 24px;
+    font-family: $bebas;
+    font-weight: lighter;
+    border-bottom: $mainBorderLight;
+  }
+
+  .bottom {
+    flex: 9;
+    padding: 16px;
+    overflow-y: auto;
+    height: 200px;
+    background-color: $secondaryBackgroundColorLight;
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $mainBackgroundColorLight;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $mainFontColorHoverLight;
+      border-radius: $mainBorderRadius;
+    }
+
+    .item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 16px;
+      padding-bottom: 16px;
+      border-bottom: $mainBorderLight;
+      width: 100%;
+
+      img {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 10px;
+      }
+
+      .notification-body {
+        font-size: 12px;
+        font-weight: bold;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        margin-right: 10px;
+      }
+
+      .notification-action {
+        font-size: 12px;
+        padding: 4px 8px;
+        font-weight: bold;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+        transition: $transition;
+        cursor: pointer;
+
+        &:hover {
+          color: $secondaryBackgroundColorLight;
+          background-color: $mainFontColorLight;
+        }
+      }
+    }
+  }
+  .link {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding-top: 16px;
+    color: $mainFontColorLight;
+    span {
+      font-size: 24px;
+      font-family: $bebas;
+    }
+    .icon {
+      font-size: 24px;
+      transform: rotate(145deg);
+    }
+  }
+}

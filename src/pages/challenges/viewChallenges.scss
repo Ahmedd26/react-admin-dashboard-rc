@@ -1,0 +1,205 @@
+@import "../../styles/functions";
+@import "../../styles/variables";
+
+.loadingContainer {
+  width: 100%;
+  margin-top: 128px;
+  background-color: $mainBackgroundColorLight;
+  @include d-flex(center, center, column, 32px);
+  .loader {
+    width: 128px;
+    height: 128px;
+    border: 6px dotted $mainFontColorHoverLight;
+    border-style: solid solid dotted dotted;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+    &::after {
+      content: "";
+      box-sizing: border-box;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      border: 6px dotted $mainFontColorLight;
+      border-style: solid solid dotted;
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      animation: rotationBack 1s linear infinite;
+      transform-origin: center center;
+    }
+  }
+  .text {
+    font-size: 64px;
+    font-family: $bebas;
+    font-weight: lighter;
+    color: $mainFontColorLight;
+    animation: jumpAnimation 1s infinite alternate;
+  }
+}
+.errorContainer {
+  margin-top: 128px;
+  @include d-flex(center, center, column, 32px);
+  color: $mainFontColorLight;
+  .errorIcon {
+    font-size: 128px;
+    animation: spin 4s linear infinite;
+  }
+  .text {
+    font-size: 44px;
+    font-family: $bebas;
+    font-weight: lighter;
+    animation: jumpAnimation 1s infinite alternate;
+  }
+  .homeLink {
+    color: $mainFontColorLight;
+    font-size: 24px;
+  }
+}
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+@keyframes jumpAnimation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.viewChallenges {
+  @include d-flex(flex-start, center, column, 32px);
+  padding: 32px;
+  background-color: $mainBackgroundColorLight;
+  width: 100%;
+  .title {
+    @include d-flex(center, space-between, row, 32px);
+    width: 100%;
+    .left,
+    .right {
+      width: 100%;
+      @include d-flex(center, space-between, row);
+      padding: 24px;
+      background-color: $secondaryBackgroundColorLight;
+      color: $mainFontColorLight;
+      border: $mainBorderLight;
+      box-shadow: $mainBoxShadowLight;
+      border-radius: $mainBorderRadius;
+      h1 {
+        font-size: 40px;
+        font-weight: lighter;
+        font-family: $bebas;
+      }
+      .titleIcon {
+        font-size: 52px;
+      }
+    }
+  }
+
+  .challenges {
+    @include d-flex(flex-start, center, column, 32px);
+    padding: 32px;
+    width: 100%;
+    border-radius: $mainBorderRadius;
+    border: $mainBorderLight;
+    background-color: $secondaryBackgroundColorLight;
+    box-shadow: $mainBoxShadowLight;
+    .challenge {
+      @include d-flex(center, center, column, 32px);
+      width: 100%;
+      .content {
+        width: 100%;
+        @include d-flex(flex-start, flex-start, row, 32px);
+        background-color: $mainBackgroundColorLight;
+        padding: 24px;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+        .left {
+          @include d-flex(flex-start, flex-start, column, 8px);
+          img {
+            border-radius: $mainBorderRadius;
+          }
+          .btn {
+            @include d-flex(center, flex-start, row, 16px);
+            width: 100%;
+            padding: 8px 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: $transition;
+            border-radius: $mainBorderRadius;
+            border: $mainBorderLight;
+            background-color: $mainBackgroundColorLight;
+            color: $mainFontColorLight;
+            .btnIcon {
+              font-size: 32px;
+            }
+            span {
+              font-size: 24px;
+              font-weight: lighter;
+              font-family: $bebas;
+            }
+            &:hover {
+              background-color: $mainFontColorLight;
+              color: $mainBackgroundColorLight;
+            }
+          }
+        }
+
+        .text {
+          @include d-flex(flex-start, flex-start, column, 8px);
+          color: $mainFontColorLight;
+          h1 {
+            font-size: 32px;
+            font-weight: lighter;
+            font-family: $bebas;
+          }
+          .items {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            padding: 16px 0;
+            border-bottom: $mainBorderLight;
+            .item {
+              grid-column: span 3;
+              font-weight: 600;
+            }
+            .info {
+              grid-column: span 9;
+            }
+          }
+        }
+      }
+    }
+  }
+}

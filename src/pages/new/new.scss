@@ -1,0 +1,85 @@
+@import "../../styles/_variables.scss";
+
+.new {
+  width: 100%;
+  display: flex;
+
+  .new-container {
+    flex: 6;
+
+    .top,
+    .bottom {
+      background-color: $secondaryBackgroundColorLight;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      padding: 10px;
+      margin: 20px;
+      display: flex;
+      h1 {
+        color: $mainFontColorHoverLight;
+        font-size: 24px;
+      }
+      .left {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        img {
+          width: 300px;
+          height: 300px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      .right {
+        flex: 2;
+        form {
+          padding: 32px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 32px;
+          justify-content: space-evenly;
+          .form-input {
+            width: 40%;
+            label {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              .icon {
+                cursor: pointer;
+              }
+            }
+            label {
+              color: $mainFontColorLight;
+              font-weight: bold;
+            }
+            input {
+              color: $mainFontColorLight;
+              background-color: $mainBackgroundColorLight;
+              border-bottom: $mainBorderLight;
+              width: 100%;
+              padding: 8px;
+              margin-top: 8px;
+              outline: none;
+              border: none;
+              &::placeholder {
+                color: $mainFontColorHoverLight;
+              }
+            }
+          }
+          button {
+            width: 150px;
+            padding: 10px;
+            border: none;
+            background-color: $mainFontColorHoverLight;
+            color: $mainBackgroundColorLight;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}

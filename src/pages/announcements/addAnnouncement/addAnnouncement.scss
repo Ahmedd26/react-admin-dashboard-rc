@@ -1,0 +1,148 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/functions";
+
+.addAnnouncement {
+  //   @include d-flex(flex-start, center, column, 32px);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 32px;
+  background-color: $mainBackgroundColorLight;
+  .title {
+    @include d-flex(center, space-between, row);
+    background-color: $secondaryBackgroundColorLight;
+    color: $mainFontColorLight;
+    border: $mainBorderLight;
+    box-shadow: $mainBoxShadowLight;
+    border-radius: $mainBorderRadius;
+    padding: 24px;
+    h1 {
+      font-size: 32px;
+      font-family: $bebas;
+      font-weight: lighter;
+    }
+    .titleIcon {
+      font-size: 32px;
+    }
+  }
+  .container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    .left {
+      grid-column: span 3;
+      img {
+        border-radius: $mainBorderRadius;
+        box-shadow: $mainBoxShadowLight;
+      }
+      .imagePlaceholder {
+        box-shadow: $mainBoxShadowLight;
+        border-radius: $mainBorderRadius;
+        width: 224px;
+        height: 224px;
+        @include d-flex(center, center, column, 16px);
+        background-color: $mainFontColorLight;
+        color: $mainBackgroundColorLight;
+        .notFound {
+          font-size: 64px;
+        }
+        .placeholderText {
+          font-size: 24px;
+          font-family: $bebas;
+          font-weight: lighter;
+        }
+      }
+    }
+    .right {
+      grid-column: span 9;
+      .announcementForm {
+        padding: 32px;
+        background-color: $secondaryBackgroundColorLight;
+        color: $mainFontColorLight;
+        border: $mainBorderLight;
+        box-shadow: $mainBoxShadowLight;
+        border-radius: $mainBorderRadius;
+
+        .formItem {
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          align-items: flex-end;
+          margin-bottom: 16px;
+          label {
+            grid-column: span 2;
+            font-size: 24px;
+            font-weight: lighter;
+            font-family: $bebas;
+          }
+          input {
+            grid-column: span 10;
+            padding: 8px;
+            outline: none;
+            background-color: $mainBackgroundColorLight;
+            color: $mainFontColorLight;
+            border: $mainBorderLight;
+            border-radius: $mainBorderRadius;
+            caret-color: $mainFontColorLight;
+            font-size: 14px;
+            font-weight: 500;
+            &::placeholder {
+              color: $mainFontColorLight;
+            }
+          }
+        }
+        .buttons {
+          gap: 16px;
+          margin-bottom: 0 !important;
+          .imageIcon {
+            grid-column: span 8;
+            outline: none;
+            border-radius: $mainBorderRadius;
+            font-size: 24px;
+            font-weight: lighter;
+            font-family: $bebas;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: $mainBorderLight;
+            color: $mainFontColorLight;
+            background-color: $mainBackgroundColorLight;
+            cursor: pointer;
+            transition: $transition;
+            &:hover {
+              background-color: $mainFontColorLight;
+              color: $mainBackgroundColorLight;
+            }
+            label {
+              cursor: pointer;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              gap: 16px;
+            }
+            input {
+              display: none;
+            }
+          }
+          .submitBtn {
+            grid-column: span 4;
+            outline: none;
+            border-radius: $mainBorderRadius;
+            font-size: 24px;
+            font-weight: lighter;
+            font-family: $bebas;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border: $mainBorderLight;
+            color: $mainFontColorLight;
+            background-color: $mainBackgroundColorLight;
+            cursor: pointer;
+            transition: $transition;
+            &:hover {
+              background-color: $mainFontColorLight;
+              color: $mainBackgroundColorLight;
+            }
+          }
+        }
+      }
+    }
+  }
+}

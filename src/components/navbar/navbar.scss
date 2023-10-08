@@ -1,0 +1,84 @@
+@import "../../styles/_variables.scss";
+
+.navbar {
+  height: 128px;
+  border-bottom: $mainBorderLight;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  color: $mainFontColorLight;
+  background-color: $secondaryBackgroundColorLight;
+  position: relative;
+  .wrapper {
+    width: 100%;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .search {
+      display: flex;
+      align-items: center;
+      border: $mainBorderLight;
+      border-radius: $mainBorderRadius;
+      padding: 4px 8px;
+      input {
+        border: none;
+        outline: none;
+        color: $mainFontColorLight;
+        background-color: transparent;
+        &::placeholder {
+          font-size: 12px;
+          color: $mainFontColorLight;
+        }
+      }
+    }
+    .items {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      .item {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .icon {
+          font-size: 24px;
+        }
+
+        .avatar {
+          width: 32px;
+          height: 32px;
+          border-radius: 50%;
+        }
+        .counter {
+          width: 16px;
+          height: 16px;
+          background-color: $mainFontColorHoverLight;
+          border-radius: 50%;
+          color: $mainBackgroundColorLight;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bold;
+          position: absolute;
+          top: -5px;
+          right: -5px;
+        }
+      }
+    }
+  }
+  .notifications {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    z-index: 999;
+  }
+  .messages {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    z-index: 999;
+  }
+}

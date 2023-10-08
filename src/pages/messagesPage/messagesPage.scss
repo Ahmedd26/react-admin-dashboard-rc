@@ -1,0 +1,102 @@
+@import "../../styles/_variables.scss";
+
+//
+.messages-page {
+  display: flex;
+  width: 100%;
+  .messages-page-container {
+    flex: 6;
+    .messages-content {
+      background-color: $mainBackgroundColorLight;
+      border: $mainBorderLight;
+      border-radius: $mainBorderRadius;
+      -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+      margin: 32px;
+      padding: 32px;
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: $mainFontColorLight;
+        border-bottom: $mainBorderLight;
+        padding-bottom: 32px;
+        h1 {
+          font-family: $bebas;
+          font-weight: lighter;
+          font-size: 32px;
+        }
+        .icon {
+          font-size: 32px;
+        }
+      }
+      .bottom {
+        flex: 9;
+        padding: 16px;
+        overflow-y: auto;
+        height: 100vh;
+
+        &::-webkit-scrollbar {
+          width: 4px;
+        }
+        &::-webkit-scrollbar-track {
+          background-color: $mainBackgroundColorLight;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background-color: $mainFontColorHoverLight;
+          border-radius: $mainBorderRadius;
+        }
+
+        .item {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-top: 16px;
+          padding-bottom: 16px;
+          border-bottom: $mainBorderLight;
+          width: 100%;
+
+          img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-right: 10px;
+          }
+
+          .message-body {
+            font-size: 12px;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            flex: 1;
+            margin-right: 10px;
+            color: $mainFontColorLight;
+          }
+          .actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            .message-action {
+              font-size: 12px;
+              padding: 4px 8px;
+              font-weight: bold;
+              color: $mainFontColorLight;
+              border: $mainBorderLight;
+              border-radius: $mainBorderRadius;
+              transition: $transition;
+              cursor: pointer;
+
+              &:hover {
+                color: $secondaryBackgroundColorLight;
+                background-color: $mainFontColorLight;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

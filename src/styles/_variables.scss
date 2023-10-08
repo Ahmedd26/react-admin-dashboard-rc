@@ -1,0 +1,22 @@
+// Dark Mode
+$bodyBackgroundColor: #07011a;
+$headerFooterBackgroundColor: #151515;
+$mainBackgroundColor: #101010;
+$secondaryBackgroundColor: #232323;
+$mainFontColor: #fcb14b;
+$mainFontColorHover: #ffc266;
+$bebas: "Bebas Neue", sans-serif;
+$transition: all 0.3s ease-in-out;
+$mainBorder: 1px solid $mainFontColor;
+$mainBorderRadius: 8px;
+$mainBoxShadow: 2px 2px 15px 3px rgba(252, 177, 75, 0.2);
+// Light Mode
+$mainFontColorLight: #2e385f;
+$mainFontColorHoverLight: #46528d;
+$bodyBackgroundColorLight: #f3f3f3;
+$headerFooterBackgroundColorLight: #ffffff;
+$mainBackgroundColorLight: #f8f8f8;
+$secondaryBackgroundColorLight: #e6e6e6;
+$mainBorderLight: 1px solid $mainFontColorLight;
+$mainBoxShadowLight: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+$secondaryBoxShadowLight: 2px 2px 15px 3px rgba(46, 56, 95, 0.2);

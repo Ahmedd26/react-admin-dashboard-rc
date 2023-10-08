@@ -1,0 +1,162 @@
+@import "../../../styles/_variables.scss";
+@import "../../../styles/functions";
+.viewPlans {
+  background-color: $mainBackgroundColorLight;
+  .title {
+    @include d-flex(stretch, center, row, 32px);
+    margin: 32px;
+    .right,
+    .left {
+      flex: 1;
+      @include d-flex(center, space-between, row);
+      color: $mainFontColorLight;
+      background-color: $secondaryBackgroundColorLight;
+      border-radius: $mainBorderRadius;
+      border: $mainBorderLight;
+      padding: 14px 24px;
+      box-shadow: $mainBoxShadowLight;
+      h1 {
+        font-size: 32px;
+        font-weight: lighter;
+        font-family: $bebas;
+      }
+      .titleIcon {
+        font-size: 32px;
+      }
+    }
+  }
+  .contentContainer {
+    margin: 32px;
+    padding: 24px;
+    background-color: $secondaryBackgroundColorLight;
+    border: $mainBorderLight;
+    border-radius: $mainBorderRadius;
+    @include d-flex(center, center, row, 24px);
+    flex-wrap: wrap;
+    .plan {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      max-width: 360px;
+      gap: 16px;
+      h1 {
+        font-weight: lighter;
+        font-family: $bebas;
+        font-size: 32px;
+        color: $mainFontColorLight;
+      }
+      .planCard {
+        box-shadow: $mainBoxShadowLight;
+        min-width: 350px;
+        min-height: 480px;
+        display: flex;
+        flex-direction: column;
+        background-color: $mainBackgroundColorLight;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+
+        .top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          background-color: $secondaryBackgroundColorLight;
+          border-radius: $mainBorderRadius $mainBorderRadius 0 0;
+          border-bottom: $mainBorderLight;
+
+          h2 {
+            padding: 24px;
+            color: $mainFontColorLight;
+            font-family: $bebas;
+            font-weight: lighter;
+            font-size: 32px;
+          }
+        }
+
+        .middle {
+          flex: 1;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          border-bottom: $mainBorderLight;
+
+          h2 {
+            padding: 24px;
+            padding-bottom: 8px;
+            color: $mainFontColorLight;
+            font-family: $bebas;
+            font-weight: lighter;
+            font-size: 32px;
+          }
+
+          ul {
+            list-style-type: none;
+            padding: 24px;
+            padding-top: 8px;
+
+            li {
+              color: $mainFontColorLight;
+            }
+          }
+        }
+
+        .bottom {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          width: 100%;
+          background-color: $secondaryBackgroundColorLight;
+          border-radius: 0 0 $mainBorderRadius $mainBorderRadius;
+
+          h2 {
+            padding: 24px;
+            padding-bottom: 8px;
+            color: $mainFontColorLight;
+            font-family: $bebas;
+            font-weight: lighter;
+            font-size: 32px;
+          }
+
+          ul {
+            list-style-type: none;
+            padding: 24px;
+            padding-top: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 16px;
+
+            li {
+              color: $mainFontColorLight;
+            }
+          }
+        }
+      }
+      .buttons {
+        @include d-flex(center, space-evenly, row);
+        padding: 16px 0;
+        background-color: $mainBackgroundColorLight;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+        color: $mainFontColorLight;
+        .planButton {
+          display: block;
+          cursor: pointer;
+          .deleteIcon {
+            color: $mainFontColorLight;
+            font-size: 32px;
+          }
+          a {
+            .editIcon {
+              color: $mainFontColorLight;
+              font-size: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

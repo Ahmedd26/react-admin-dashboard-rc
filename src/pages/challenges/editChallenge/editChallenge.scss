@@ -1,0 +1,133 @@
+@import "../../../styles/functions";
+@import "../../../styles/variables";
+
+.editChallenge {
+  @include d-flex(flex-start, center, column, 32px);
+  padding: 32px;
+  background-color: $mainBackgroundColorLight;
+  width: 100%;
+  .title {
+    width: 100%;
+    @include d-flex(center, space-between, row);
+    padding: 24px;
+    background-color: $secondaryBackgroundColorLight;
+    color: $mainFontColorLight;
+    border: $mainBorderLight;
+    box-shadow: $mainBoxShadowLight;
+    border-radius: $mainBorderRadius;
+    h1 {
+      font-size: 40px;
+      font-weight: lighter;
+      font-family: $bebas;
+    }
+    .titleIcon {
+      font-size: 52px;
+    }
+  }
+  .content {
+    // @include d-flex(center, center, row);
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: flex-start;
+    width: 100%;
+    padding: 24px;
+    background-color: $secondaryBackgroundColorLight;
+    border-radius: $mainBorderRadius;
+    border: $mainBorderLight;
+    .left {
+      grid-column: span 4;
+      @include d-flex(center, center, column, 16px);
+      h1 {
+        font-size: 18px;
+        color: $mainFontColorLight;
+      }
+      img {
+        border-radius: $mainBorderRadius;
+      }
+    }
+    .challengeForm {
+      width: 100%;
+      grid-column: span 8;
+      padding-left: 16px;
+      border-left: $mainBorderLight;
+      @include d-flex(flex-start, flex-start, column, 16px);
+      .formItem {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        align-items: flex-start;
+        label {
+          grid-column: span 4;
+          font-family: $bebas;
+          font-weight: lighter;
+          color: $mainFontColorLight;
+          font-size: 24px;
+        }
+        .inputField {
+          grid-column: span 8;
+          outline: none;
+          padding: 8px 16px;
+          border-radius: $mainBorderRadius;
+          border: $mainBorderLight;
+          color: $mainFontColorLight;
+          background-color: $mainBackgroundColorLight;
+          font-weight: 500;
+          &::placeholder {
+            font-weight: 500;
+            color: $mainFontColorLight;
+          }
+        }
+        .textArea {
+          max-width: 100%;
+          min-height: 64px;
+          resize: vertical;
+          &::-webkit-scrollbar {
+            width: 8px;
+          }
+        }
+        .image {
+          grid-column: span 8;
+          @include d-flex(center, center);
+          label {
+            border-radius: $mainBorderRadius;
+            border: $mainBorderLight;
+            background-color: $mainBackgroundColorLight;
+            padding: 8px 0;
+            cursor: pointer;
+            width: 100%;
+            text-align: center;
+            transition: $transition;
+            &:hover {
+              background-color: $mainFontColorLight;
+              color: $mainBackgroundColorLight;
+            }
+          }
+          .uploadIcon {
+            font-size: 32px;
+          }
+          #imageUpload {
+            display: none;
+          }
+        }
+      }
+      .submitBtn {
+        grid-column: span 12;
+        outline: none;
+        border-radius: $mainBorderRadius;
+        font-size: 32px;
+        font-family: $bebas;
+        font-weight: lighter;
+        padding: 8px 0;
+        transition: $transition;
+        cursor: pointer;
+        color: $mainFontColorLight;
+        background-color: $mainBackgroundColorLight;
+        border: $mainBorderLight;
+        &:hover {
+          background-color: $mainFontColorLight;
+          color: $mainBackgroundColorLight;
+        }
+      }
+    }
+  }
+}

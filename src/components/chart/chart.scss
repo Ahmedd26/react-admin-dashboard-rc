@@ -1,0 +1,24 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_functions.scss";
+
+.chart {
+  flex: 4;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 24px;
+  color: $mainFontColorLight;
+  background-color: $secondaryBackgroundColorLight;
+  border-radius: $mainBorderRadius;
+  @include d-flex(flex-start, space-between, column);
+  .title {
+    margin-bottom: 20px;
+    font-size: 26px;
+    font-family: $bebas;
+    font-weight: lighter;
+  }
+
+  .chart-grid {
+    stroke: $mainFontColorHoverLight;
+    opacity: 0.3;
+  }
+}

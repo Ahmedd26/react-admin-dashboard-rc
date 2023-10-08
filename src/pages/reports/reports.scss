@@ -1,0 +1,44 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/functions";
+
+.reports {
+  @include d-flex(center, center, column, 32px);
+  color: $mainFontColorLight;
+  height: 50%;
+  h1 {
+    font-size: 64px;
+    font-family: $bebas;
+    font-weight: lighter;
+  }
+  .jumping-heading {
+    display: inline-block;
+    animation: jump 2s infinite;
+  }
+
+  @keyframes jump {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  .icon-container {
+    display: inline-block;
+    animation: rotate 4s infinite linear;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .icon {
+    font-size: 128px;
+  }
+}

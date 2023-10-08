@@ -1,0 +1,1305 @@
+@import "../styles/variables";
+
+//
+//
+//
+.app.dark {
+  background-color: $mainBackgroundColor;
+  .content {
+    background-color: $mainBackgroundColor;
+  }
+  ::-webkit-scrollbar {
+    width: 14px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: $mainBackgroundColor !important;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: $mainFontColor !important;
+  }
+  ::selection {
+    background-color: $mainFontColor;
+    color: $secondaryBackgroundColor;
+  }
+  // Side bar
+  .sidebar {
+    -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+    box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+    border-right: $mainBorder;
+    background-color: $secondaryBackgroundColor;
+    .top {
+      border-bottom: $mainBorder;
+      .logo {
+        h1 {
+          color: $mainFontColor;
+        }
+      }
+    }
+    .center {
+      .center-top {
+        border-bottom: $mainBorder;
+
+        h2 {
+          color: $mainFontColor;
+        }
+        p {
+          color: $mainFontColorHover;
+        }
+      }
+      .center-bottom {
+        border-bottom: $mainBorder;
+        ul {
+          .title {
+            color: $mainFontColor;
+          }
+          li {
+            color: $mainFontColor;
+            &:hover {
+              background-color: $mainFontColor;
+              color: $mainBackgroundColor;
+            }
+            &:hover .icon {
+              color: $mainBackgroundColor;
+            }
+            .icon {
+              color: $mainFontColor;
+            }
+          }
+        }
+      }
+    }
+    .bottom {
+      .color-option {
+        &:nth-child(1) {
+          background-color: $mainBackgroundColor;
+          border: $mainBorderLight;
+        }
+        &:nth-child(2) {
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+        }
+      }
+    }
+  }
+  // Navbar
+  .navbar {
+    border-bottom: $mainBorder;
+    color: $mainFontColor;
+    background-color: $secondaryBackgroundColor;
+    -webkit-box-shadow: 10px 0px 10px 1px rgba(252, 177, 75, 0.26);
+    box-shadow: 10px 0px 10px 1px rgba(252, 177, 75, 0.26);
+    .wrapper {
+      .search {
+        border: $mainBorder;
+        border-radius: $mainBorderRadius;
+        input {
+          border: none;
+          outline: none;
+          color: $mainFontColor;
+          background-color: transparent;
+          &::placeholder {
+            font-size: 12px;
+            color: $mainFontColor;
+          }
+        }
+      }
+      .items {
+        .item {
+          .counter {
+            background-color: $mainFontColorHover;
+            color: $secondaryBackgroundColor;
+          }
+        }
+      }
+    }
+  }
+  // Notifications & messages
+
+  .notifications,
+  .messages {
+    color: $mainFontColor;
+    background-color: $secondaryBackgroundColor;
+    border-radius: $mainBorderRadius;
+    border: $mainBorder;
+
+    .top {
+      border-bottom: $mainBorder;
+    }
+
+    .bottom {
+      background-color: $secondaryBackgroundColor;
+
+      &::-webkit-scrollbar {
+        width: 4px;
+      }
+      &::-webkit-scrollbar-track {
+        background-color: $mainBackgroundColor;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: $mainFontColorHover;
+        border-radius: $mainBorderRadius;
+      }
+
+      .item {
+        border-bottom: $mainBorder;
+        .notification-action,
+        .message-action {
+          border: $mainBorder;
+          border-radius: $mainBorderRadius;
+          transition: $transition;
+
+          &:hover {
+            color: $secondaryBackgroundColor !important;
+            background-color: $mainFontColor !important;
+          }
+        }
+      }
+    }
+    .link {
+      color: $mainFontColor;
+    }
+  }
+
+  // Widget
+  .widget {
+    -webkit-box-shadow: $mainBoxShadow;
+    box-shadow: $mainBoxShadow;
+    background-color: $secondaryBackgroundColor;
+    .left,
+    .right {
+      .title {
+        color: $mainFontColorHover;
+      }
+      .counter {
+        color: $mainFontColorHover;
+      }
+      .link {
+        color: $mainFontColor;
+        border-bottom: $mainBorder;
+      }
+      .icon {
+        color: $mainFontColor;
+        color: $mainFontColorHover;
+        background-color: $mainBackgroundColor;
+      }
+    }
+    &:hover {
+      background-color: $mainBackgroundColor;
+      .icon {
+        background-color: $mainFontColorHover;
+        color: $mainBackgroundColor;
+      }
+    }
+  }
+
+  // Chart
+  .chart {
+    -webkit-box-shadow: 1px 1px 5px 1px rgba(252, 177, 75, 0.26);
+    box-shadow: 1px 1px 5px 1px rgba(252, 177, 75, 0.26);
+    color: $mainFontColor;
+    background-color: $secondaryBackgroundColor;
+    .chart-grid {
+      stroke: $mainFontColorHover;
+      opacity: 0.2;
+    }
+  }
+  // Featured
+  .featured {
+    -webkit-box-shadow: $mainBoxShadow;
+    box-shadow: $mainBoxShadow;
+    background-color: $secondaryBackgroundColor;
+
+    .top {
+      border-bottom: $mainBorder;
+      color: $mainFontColor;
+    }
+    .middle {
+      color: $mainFontColor;
+      border-bottom: $mainBorder;
+      .CircularProgressbar .CircularProgressbar-text {
+        fill: $mainFontColor;
+      }
+      .CircularProgressbar .CircularProgressbar-path {
+        stroke: $mainFontColor;
+      }
+      .CircularProgressbar .CircularProgressbar-trail {
+        stroke: $mainFontColorHover !important;
+        opacity: 0.2;
+      }
+    }
+    .bottom {
+      color: $mainFontColor;
+    }
+  }
+
+  // Table
+
+  .table {
+    color: $mainFontColor;
+
+    .table-cell {
+      background-color: $secondaryBackgroundColor;
+      color: $mainFontColor;
+      border-color: $mainFontColor;
+    }
+  }
+  // Home
+  .home {
+    .list-container {
+      -webkit-box-shadow: $mainBoxShadow;
+      box-shadow: $mainBoxShadow;
+      background-color: $secondaryBackgroundColor;
+      .list-title {
+        color: $mainFontColor;
+      }
+      .css-11xur9t-MuiPaper-root-MuiTableContainer-root {
+        background-color: $mainBackgroundColor;
+        -webkit-box-shadow: $mainBoxShadow;
+        box-shadow: $mainBoxShadow;
+        table {
+          thead {
+            tr {
+              th {
+                color: $mainBackgroundColor;
+                background-color: $mainFontColor;
+              }
+            }
+          }
+          tbody {
+            tr {
+              td {
+                color: $mainFontColor;
+              }
+              &:nth-child(even) {
+                background-color: $secondaryBackgroundColor;
+              }
+              &:hover {
+                td {
+                  background-color: $mainFontColorHover;
+                  color: $mainBackgroundColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Datatable
+  .dataTable {
+    background-color: $mainBackgroundColor;
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background-color: $mainBackgroundColor;
+    }
+    ::-webkit-scrollbar-thumb {
+      background-color: $mainFontColorHover;
+    }
+    height: 600px;
+    padding: 32px;
+    .datagrid {
+      background-color: $secondaryBackgroundColor;
+      color: $mainFontColor;
+      border-color: $mainFontColorHover;
+    }
+
+    .dataTable-title {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+      .link {
+        background-color: $mainBackgroundColor;
+        color: $mainFontColorHover;
+        border: $mainBorder;
+        &:hover {
+          background-color: $mainFontColorHover;
+          color: $secondaryBackgroundColor;
+        }
+      }
+    }
+    .cellAction {
+      .viewButton,
+      .deleteButton {
+        color: $mainFontColor;
+        border: $mainBorder;
+        transition: $transition;
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+  }
+  // overriding MUI Colors
+  .css-78c6dr-MuiToolbar-root-MuiTablePagination-toolbar {
+    color: $mainFontColor !important;
+  }
+  .css-12u49z-MuiDataGrid-root .MuiDataGrid-iconSeparator {
+    color: $mainFontColor !important;
+  }
+  .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+  .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+    color: $mainFontColor !important;
+    border-color: $mainFontColor !important;
+  }
+  .css-12u49z-MuiDataGrid-root .MuiDataGrid-row.Mui-selected {
+    background-color: $mainFontColor !important;
+    color: $mainBackgroundColor !important;
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.Mui-checked,
+    .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root.MuiCheckbox-indeterminate {
+      color: $mainBackgroundColor !important;
+    }
+  }
+
+  .css-204u17-MuiDataGrid-main {
+    color: $mainFontColor;
+  }
+  .css-204u17-MuiDataGrid-main {
+    background: $secondaryBackgroundColor !important;
+  }
+  .css-1uxm9js-MuiDataGrid-root {
+    border-color: $mainFontColor;
+    box-shadow: $mainBoxShadow;
+    margin-top: 32px;
+  }
+  .css-yrdy0g-MuiDataGrid-columnHeaderRow {
+    background-color: $mainFontColorHover;
+    opacity: 0.8;
+    color: $mainBackgroundColor;
+    border-color: $mainFontColor;
+  }
+  .css-t89xny-MuiDataGrid-columnHeaderTitle {
+    font-family: $bebas;
+    font-weight: lighter;
+    font-size: 24px;
+  }
+  .css-1uxm9js-MuiDataGrid-root
+    .MuiDataGrid-row:not(.MuiDataGrid-row--dynamicHeight)
+    > .MuiDataGrid-cell {
+    outline: none;
+  }
+  .css-1uxm9js-MuiDataGrid-root .MuiDataGrid-cell {
+    border-color: $mainFontColor;
+  }
+  .css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root {
+    color: $mainFontColor;
+    &:nth-child(1) {
+      color: $mainBackgroundColor;
+    }
+  }
+  // User Profile
+
+  .single {
+    .single-container {
+      flex: 6;
+      .top {
+        .left {
+          flex: 1;
+          -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+          box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+          .editButton {
+            color: $mainBackgroundColor;
+            background-color: $mainFontColorHover;
+          }
+          .item {
+            .details {
+              .itemTitle {
+                color: $mainFontColor;
+              }
+              .detailItem {
+                .itemKey {
+                  color: $mainFontColor;
+                }
+                .itemValue {
+                  color: $mainFontColorHover;
+                }
+              }
+            }
+          }
+        }
+      }
+      .bottom {
+        -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+      }
+      .title {
+        color: $mainFontColorHover;
+      }
+    }
+  }
+  // Form
+
+  .new {
+    .new-container {
+      background-color: $mainBackgroundColor;
+      .top,
+      .bottom {
+        -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        background-color: $secondaryBackgroundColor;
+        h1 {
+          color: $mainFontColorHover;
+        }
+        .right {
+          form {
+            .form-input {
+              width: 40%;
+              label {
+                color: $mainFontColor;
+                .icon {
+                  cursor: pointer;
+                }
+              }
+              input {
+                color: $mainFontColor;
+                background-color: $secondaryBackgroundColor;
+                border-bottom: $mainBorder;
+                &::placeholder {
+                  color: $mainFontColorHover;
+                }
+              }
+            }
+            button {
+              background-color: $mainFontColorHover;
+              color: $mainBackgroundColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  //notifications-page
+  .notifications-page {
+    .notifications-page-container {
+      .notification-content {
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+
+        .top {
+          color: $mainFontColor;
+          border-bottom: $mainBorder;
+        }
+        .bottom {
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: $mainBackgroundColor;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $mainFontColorHover;
+          }
+
+          .item {
+            border-bottom: $mainBorder;
+            .notification-body {
+              color: $mainFontColor;
+            }
+            .actions {
+              .notification-action {
+                border: $mainBorder;
+                border-radius: $mainBorder;
+                color: $mainFontColor;
+
+                &:hover {
+                  color: $secondaryBackgroundColor;
+                  background-color: $mainFontColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Messages Page
+  .messages-page {
+    .messages-page-container {
+      .messages-content {
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        border-radius: $mainBorderRadius;
+        -webkit-box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        box-shadow: 0px 10px 10px 1px rgba(252, 177, 75, 0.26);
+        .top {
+          color: $mainFontColor;
+          border-bottom: $mainBorder;
+        }
+        .bottom {
+          &::-webkit-scrollbar {
+            width: 4px;
+          }
+          &::-webkit-scrollbar-track {
+            background-color: $mainBackgroundColor;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            background-color: $mainFontColorHover;
+            border-radius: $mainBorderRadius;
+          }
+
+          .item {
+            border-bottom: $mainBorder;
+            .message-body {
+              color: $mainFontColor;
+            }
+            .actions {
+              .message-action {
+                color: $mainFontColor;
+                border: $mainBorder;
+                &:hover {
+                  color: $secondaryBackgroundColor;
+                  background-color: $mainFontColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // Add Admin Form
+  .admins {
+    .admins-container {
+      background-color: $mainBackgroundColor;
+      .addAdminForm {
+        .title {
+          background-color: $secondaryBackgroundColor;
+          color: $mainFontColor;
+          border: $mainBorder;
+          .icon {
+            background-color: $mainBackgroundColor;
+            border: $mainBorder;
+          }
+        }
+        form {
+          background-color: $secondaryBackgroundColor;
+          border: $mainBorder;
+          .formItem {
+            label {
+              color: $mainFontColor;
+            }
+            .input {
+              border: $mainBorder;
+              caret-color: $mainFontColor;
+              color: $mainFontColor;
+              background-color: $mainBackgroundColor;
+              &::placeholder {
+                color: $mainFontColor;
+              }
+            }
+            .uploadButton {
+              background-color: $mainBackgroundColor;
+              label {
+                color: $mainFontColor;
+                svg {
+                  color: $mainFontColor;
+                }
+              }
+              &:hover {
+                background-color: $mainFontColor;
+                label {
+                  color: $mainBackgroundColor;
+                  svg {
+                    color: $mainBackgroundColor;
+                  }
+                }
+              }
+            }
+          }
+          button {
+            background-color: $mainBackgroundColor;
+            color: $mainFontColor;
+            border: $mainBorder;
+            &:hover {
+              color: $mainBackgroundColor;
+              background-color: $mainFontColor;
+            }
+          }
+        }
+      }
+    }
+  }
+  // View Plans
+  .viewPlans {
+    background-color: $mainBackgroundColor;
+    .title {
+      .right,
+      .left {
+        color: $mainFontColor;
+        background-color: $secondaryBackgroundColor;
+        border: $mainBorder;
+        box-shadow: $mainBoxShadow;
+      }
+    }
+    .contentContainer {
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      .plan {
+        h1 {
+          color: $mainFontColor;
+        }
+        .planCard {
+          box-shadow: $mainBoxShadow;
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          .top {
+            background-color: $secondaryBackgroundColor;
+            border-bottom: $mainBorder;
+            h2 {
+              color: $mainFontColor;
+            }
+          }
+
+          .middle {
+            border-bottom: $mainBorder;
+            h2 {
+              color: $mainFontColor;
+            }
+
+            ul {
+              li {
+                color: $mainFontColor;
+              }
+            }
+          }
+
+          .bottom {
+            background-color: $secondaryBackgroundColor;
+
+            h2 {
+              color: $mainFontColor;
+            }
+
+            ul {
+              li {
+                color: $mainFontColor;
+              }
+            }
+          }
+        }
+        .buttons {
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          color: $mainFontColor;
+          .planButton {
+            .deleteIcon {
+              color: $mainFontColor;
+            }
+            a {
+              .editIcon {
+                color: $mainFontColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Edit Plan
+  .editPlan {
+    background-color: $mainBackgroundColor;
+    .title {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    form {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      box-shadow: $mainBoxShadow;
+      border: $mainBorder;
+      .formItem {
+        input {
+          border: $mainBorder;
+          color: $mainFontColor;
+          caret-color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          &::placeholder {
+            color: $mainFontColor;
+          }
+        }
+        .actionBtn {
+          .addIcon,
+          .deleteIcon {
+            background-color: $mainBackgroundColor;
+            color: $mainFontColor;
+            border: $mainBorder;
+            &:hover {
+              color: $mainBackgroundColor;
+              background-color: $mainFontColor;
+            }
+          }
+        }
+      }
+
+      button {
+        color: $mainFontColor;
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+  }
+
+  // Add Plan
+  .addPlan {
+    background-color: $mainBackgroundColor;
+    .title {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    form {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      box-shadow: $mainBoxShadow;
+      border: $mainBorder;
+      .formItem {
+        input {
+          border-radius: $mainBorderRadius;
+          border: $mainBorder;
+          color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          caret-color: $mainFontColor;
+          &::placeholder {
+            color: $mainFontColor;
+          }
+        }
+        .actionBtn {
+          .addIcon,
+          .deleteIcon {
+            background-color: $mainBackgroundColor;
+            color: $mainFontColor;
+            border: $mainBorder;
+            &:hover {
+              color: $mainBackgroundColor;
+              background-color: $mainFontColor;
+            }
+          }
+        }
+      }
+
+      button {
+        color: $mainFontColor;
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+  }
+
+  // --- --- --- Licenses --- --- --- //
+  .loading-spinner-container {
+    background-color: $mainBackgroundColor;
+  }
+  .loading-spinner {
+    border: 6px solid $mainFontColorHover;
+    border-left-color: $secondaryBackgroundColor;
+  }
+  .errorLoading {
+    background-color: $mainFontColor;
+    color: $mainBackgroundColor;
+    a {
+      color: $mainBackgroundColor;
+    }
+  }
+  // ViewLicenses
+
+  .viewLicenses {
+    background-color: $mainBackgroundColor;
+    .LicensesContent {
+      .titles {
+        a {
+          background-color: $secondaryBackgroundColor;
+          color: $mainFontColor;
+          border: $mainBorder;
+        }
+      }
+      .licensesContainer {
+        background-color: $secondaryBackgroundColor;
+        border: $mainBorder;
+        color: $mainFontColor;
+        .license {
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          .top {
+            .licenseDescription {
+              border-bottom: $mainBorder;
+              color: $mainFontColorHover;
+            }
+          }
+          .middle {
+            ul {
+              li {
+                color: $mainFontColorHover;
+              }
+            }
+          }
+          .bottom {
+            border-top: $mainBorder;
+            .priceAndFiles {
+              .price,
+              .files {
+                p {
+                  color: $mainFontColorHover;
+                }
+              }
+            }
+            .buttons {
+              border: $mainBorder;
+              background-color: $secondaryBackgroundColor;
+              color: $mainFontColor;
+              .licenseButton {
+                a {
+                  color: $mainFontColor;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // EditLicense
+
+  .editLicense {
+    background-color: $mainBackgroundColor;
+    .title {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+
+    form {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      box-shadow: $mainBoxShadow;
+      border: $mainBorder;
+      .formItem {
+        input,
+        .descriptionTextarea {
+          border: $mainBorder;
+          color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          caret-color: $mainFontColor;
+          &::placeholder {
+            color: $mainFontColor;
+          }
+        }
+        .actionBtn {
+          .addIcon,
+          .deleteIcon {
+            background-color: $mainBackgroundColor;
+            color: $mainFontColor;
+            border: $mainBorder;
+            &:hover {
+              color: $mainBackgroundColor;
+              background-color: $mainFontColor;
+            }
+          }
+        }
+      }
+
+      button {
+        color: $mainFontColor;
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+  }
+
+  // AddLicense
+
+  .addLicense {
+    background-color: $mainBackgroundColor;
+    .title {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    form {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      box-shadow: $mainBoxShadow;
+      border: $mainBorder;
+      .formItem {
+        input,
+        .descriptionTextarea {
+          border: $mainBorder;
+          color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          caret-color: $mainFontColor;
+          &::placeholder {
+            color: $mainFontColor;
+          }
+        }
+        .actionBtn {
+          .addIcon,
+          .deleteIcon {
+            background-color: $mainBackgroundColor;
+            color: $mainFontColor;
+            border: $mainBorder;
+            &:hover {
+              color: $mainBackgroundColor;
+              background-color: $mainFontColor;
+            }
+          }
+        }
+      }
+
+      button {
+        color: $mainFontColor;
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+  }
+
+  // --- --- --- Announcements --- --- --- //
+  // View Announcement LOADER
+  .loading-container {
+    background-color: $mainBackgroundColor;
+    .loader {
+      background: linear-gradient(
+        0deg,
+        rgba(252, 177, 75, 0.2) 33%,
+        #fcb14b 100%
+      );
+      &::after {
+        background: $secondaryBackgroundColor;
+      }
+    }
+    .text {
+      color: $mainFontColor;
+    }
+  }
+  // View Announcement ERROR
+  .errorContainer {
+    h2 {
+      color: $mainFontColorHover;
+    }
+    .navToHome {
+      color: $mainFontColor;
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      &:hover {
+        color: $secondaryBackgroundColor;
+        background-color: $mainFontColor;
+      }
+    }
+  }
+
+  // View Announcements
+  .announcementContainer {
+    background-color: $mainBackgroundColor;
+    .titles {
+      .left,
+      .right {
+        border: $mainBorder;
+        color: $mainFontColor;
+        background-color: $secondaryBackgroundColor;
+      }
+      .right {
+        &:hover {
+          color: $mainBackgroundColor;
+          background-color: $mainFontColor;
+        }
+      }
+    }
+    .viewAnnouncements {
+      border: $mainBorder;
+      background-color: $secondaryBackgroundColor;
+      .announcement {
+        .content {
+          border: $mainBorder;
+          border-radius: $mainBorderRadius;
+          background-color: $mainBackgroundColor;
+          .imagePlaceholder {
+            background-color: $mainFontColor;
+            color: $mainBackgroundColor;
+          }
+          .text {
+            color: $mainFontColor;
+          }
+        }
+        .deleteBtn {
+          border: $mainBorder;
+          background-color: $mainBackgroundColor;
+          color: $mainFontColor;
+          &:hover {
+            background-color: $mainFontColor;
+            color: $mainBackgroundColor;
+          }
+        }
+      }
+    }
+  }
+  // Add Announcement
+  .addAnnouncement {
+    background-color: $mainBackgroundColor;
+    .title {
+      background-color: $secondaryBackgroundColor;
+      color: $mainFontColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    .container {
+      .left {
+        img {
+          box-shadow: $mainBoxShadow;
+        }
+        .imagePlaceholder {
+          box-shadow: $mainBoxShadow;
+          background-color: $mainFontColor;
+          color: $mainBackgroundColor;
+        }
+      }
+      .right {
+        .announcementForm {
+          background-color: $secondaryBackgroundColor;
+          color: $mainFontColor;
+          border: $mainBorder;
+          box-shadow: $mainBoxShadow;
+          .formItem {
+            input {
+              background-color: $mainBackgroundColor;
+              color: $mainFontColor;
+              border: $mainBorder;
+              caret-color: $mainFontColor;
+              &::placeholder {
+                color: $mainFontColor;
+              }
+            }
+          }
+          .buttons {
+            .imageIcon {
+              border: $mainBorder;
+              color: $mainFontColor;
+              background-color: $mainBackgroundColor;
+              &:hover {
+                background-color: $mainFontColor;
+                color: $mainBackgroundColor;
+              }
+            }
+            .submitBtn {
+              border: $mainBorder;
+              color: $mainFontColor;
+              background-color: $mainBackgroundColor;
+              &:hover {
+                background-color: $mainFontColor;
+                color: $mainBackgroundColor;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // --- --- --- Challenges --- --- --- //
+  // View Challenges
+  // Loading & Error
+  .loadingContainer {
+    background-color: $mainBackgroundColor;
+    .loader {
+      border: 6px dotted $mainFontColorHover;
+      border-style: solid solid dotted dotted;
+      &::after {
+        content: "";
+        border: 6px dotted $mainFontColor;
+        border-style: solid solid dotted;
+      }
+    }
+    .text {
+      color: $mainFontColor;
+    }
+  }
+  .errorContainer {
+    color: $mainFontColor;
+    .homeLink {
+      color: $mainFontColor;
+    }
+  }
+  .viewChallenges {
+    background-color: $mainBackgroundColor;
+    .title {
+      .left,
+      .right {
+        background-color: $secondaryBackgroundColor;
+        color: $mainFontColor;
+        border: $mainBorder;
+        box-shadow: $mainBoxShadow;
+      }
+    }
+    .challenges {
+      border: $mainBorder;
+      background-color: $secondaryBackgroundColor;
+      box-shadow: $mainBoxShadow;
+      .challenge {
+        .content {
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          .left {
+            .btn {
+              border: $mainBorder;
+              background-color: $mainBackgroundColor;
+              color: $mainFontColor;
+              &:hover {
+                background-color: $mainFontColor;
+                color: $mainBackgroundColor;
+              }
+            }
+          }
+
+          .text {
+            color: $mainFontColor;
+            .items {
+              border-bottom: $mainBorder;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Add Challenges
+  .newChallenge {
+    background-color: $mainBackgroundColor;
+    .title {
+      background-color: $secondaryBackgroundColor;
+      color: $mainFontColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    .content {
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      .left {
+        h1 {
+          color: $mainFontColor;
+        }
+      }
+      .challengeForm {
+        border-left: $mainBorder;
+        .formItem {
+          label {
+            color: $mainFontColor;
+          }
+          .inputField {
+            border: $mainBorder;
+            color: $mainFontColor;
+            background-color: $mainBackgroundColor;
+            &::placeholder {
+              color: $mainFontColor;
+            }
+          }
+          .image {
+            label {
+              border: $mainBorder;
+              background-color: $mainBackgroundColor;
+              &:hover {
+                background-color: $mainFontColor;
+                color: $mainBackgroundColor;
+              }
+            }
+          }
+        }
+        .submitBtn {
+          color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          &:hover {
+            background-color: $mainFontColor;
+            color: $mainBackgroundColor;
+          }
+        }
+      }
+    }
+  }
+
+  // Edit Challenges
+  .editChallenge {
+    background-color: $mainBackgroundColor;
+    .title {
+      background-color: $secondaryBackgroundColor;
+      color: $mainFontColor;
+      border: $mainBorder;
+      box-shadow: $mainBoxShadow;
+    }
+    .content {
+      background-color: $secondaryBackgroundColor;
+      border: $mainBorder;
+      .left {
+        h1 {
+          color: $mainFontColor;
+        }
+      }
+      .challengeForm {
+        border-left: $mainBorder;
+        .formItem {
+          label {
+            color: $mainFontColor;
+          }
+          .inputField {
+            border: $mainBorder;
+            color: $mainFontColor;
+            background-color: $mainBackgroundColor;
+            &::placeholder {
+              color: $mainFontColor;
+            }
+          }
+          .image {
+            label {
+              border: $mainBorder;
+              background-color: $mainBackgroundColor;
+              &:hover {
+                background-color: $mainFontColor;
+                color: $mainBackgroundColor;
+              }
+            }
+          }
+        }
+        .submitBtn {
+          color: $mainFontColor;
+          background-color: $mainBackgroundColor;
+          border: $mainBorder;
+          &:hover {
+            background-color: $mainFontColor;
+            color: $mainBackgroundColor;
+          }
+        }
+      }
+    }
+  }
+
+  // END
+}

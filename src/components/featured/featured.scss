@@ -1,0 +1,97 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/_functions.scss";
+
+.featured {
+  flex: 2;
+  -webkit-box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  box-shadow: 2px 4px 10px 1px rgba(201, 201, 201, 0.47);
+  padding: 24px;
+  background-color: $secondaryBackgroundColorLight;
+  border-radius: $mainBorderRadius;
+  @include d-flex(center, center, column, 32px);
+
+  .top,
+  .middle,
+  .bottom {
+    width: 100%;
+  }
+  .top {
+    flex: 1;
+    @include d-flex(center, space-between, row);
+    border-bottom: $mainBorderLight;
+    padding-bottom: 16px;
+    color: $mainFontColorLight;
+    h3 {
+      font: {
+        size: 32px;
+        family: $bebas;
+        weight: lighter;
+      }
+    }
+  }
+  .middle {
+    flex: 2;
+    @include d-flex(center, center, column, 24px);
+    color: $mainFontColorLight;
+    border-bottom: $mainBorderLight;
+    padding-bottom: 16px;
+    .circularProgress {
+      width: 50%;
+    }
+    .CircularProgressbar .CircularProgressbar-text {
+      fill: $mainFontColorLight;
+    }
+    .CircularProgressbar .CircularProgressbar-path {
+      stroke: $mainFontColorLight;
+    }
+    .CircularProgressbar .CircularProgressbar-trail {
+      stroke: $mainFontColorHoverLight !important;
+      opacity: 0.5;
+    }
+
+    h3 {
+      font-size: 24px;
+    }
+    span {
+      font: {
+        size: 44px;
+        family: $bebas;
+        weight: lighter;
+      }
+    }
+    p {
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  .bottom {
+    flex: 1;
+    @include d-flex(center, space-between, row);
+    color: $mainFontColorLight;
+    .item {
+      @include d-flex(flex-start, center, column, 8px);
+
+      .title {
+        @include d-flex(center, center, row, 4px);
+        h1 {
+          font: {
+            size: 26px;
+            family: $bebas;
+            weight: lighter;
+          }
+        }
+        .arrow {
+          .positiveArrow {
+            color: #0a0 !important;
+          }
+          .negativeArrow {
+            color: #a00 !important;
+          }
+        }
+      }
+      .numberValue {
+        font-size: 16px;
+      }
+    }
+  }
+}

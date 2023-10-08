@@ -1,0 +1,111 @@
+@import "../../styles/_variables.scss";
+@import "../../styles/functions";
+.admins {
+  padding: 32px;
+  .title {
+    @include d-flex(center, space-between, row);
+    padding: 16px;
+    background-color: $secondaryBackgroundColorLight;
+    color: $mainFontColorLight;
+    border: $mainBorderLight;
+    border-radius: $mainBorderRadius;
+    margin-bottom: 24px;
+    h1 {
+      font: {
+        size: 32px;
+        family: $bebas;
+        weight: lighter;
+      }
+    }
+    .icon {
+      font-size: 50px;
+      background-color: $mainBackgroundColorLight;
+      padding: 6px 12px;
+      border-radius: $mainBorderRadius;
+      border: $mainBorderLight;
+    }
+  }
+  form {
+    // width: 100%;
+    padding: 32px;
+    background-color: $secondaryBackgroundColorLight;
+    border-radius: $mainBorderRadius;
+    border: $mainBorderLight;
+    @include d-flex(center, center, column, 16px);
+    .formItem {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      label {
+        grid-column: span 2;
+        color: $mainFontColorLight;
+        font-size: 24px;
+        font-family: $bebas;
+        font-weight: lighter;
+      }
+      .input {
+        grid-column: span 6;
+        padding: 8px 16px;
+        border: $mainBorderLight;
+        outline: none;
+        border-radius: $mainBorderRadius;
+        caret-color: $mainFontColorLight;
+        color: $mainFontColorLight;
+        background-color: $mainBackgroundColorLight;
+        font-size: 14px;
+        font-weight: 400;
+        &::placeholder {
+          color: $mainFontColorLight;
+        }
+      }
+      .uploadButton {
+        background-color: $mainBackgroundColorLight;
+        transition: $transition;
+        input[type="file"] {
+          display: none;
+        }
+        label {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: 12px;
+          text-transform: uppercase;
+          color: $mainFontColorLight;
+          text-align: start;
+          user-select: none;
+          // font-size: 24px;
+          cursor: pointer;
+          svg {
+            color: $mainFontColorLight;
+          }
+        }
+        &:hover {
+          background-color: $mainFontColorLight;
+          label {
+            color: $mainBackgroundColorLight;
+            svg {
+              color: $mainBackgroundColorLight;
+            }
+          }
+        }
+      }
+    }
+    button {
+      margin-top: 16px;
+      padding: 8px 64px;
+      font-size: 32px;
+      font-weight: lighter;
+      font-family: $bebas;
+      background-color: $mainBackgroundColorLight;
+      color: $mainFontColorLight;
+      border: $mainBorderLight;
+      border-radius: $mainBorderRadius;
+      transition: $transition;
+      cursor: pointer;
+      &:hover {
+        color: $mainBackgroundColorLight;
+        background-color: $mainFontColorLight;
+      }
+    }
+  }
+}

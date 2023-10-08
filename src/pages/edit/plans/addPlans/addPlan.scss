@@ -1,0 +1,100 @@
+@import "../../../../styles/_variables.scss";
+@import "../../../../styles/functions";
+.addPlan {
+  background-color: $mainBackgroundColorLight;
+  .title {
+    @include d-flex(center, space-between, row);
+    color: $mainFontColorLight;
+    background-color: $secondaryBackgroundColorLight;
+    border-radius: $mainBorderRadius;
+    border: $mainBorderLight;
+    margin: 32px;
+    padding: 14px 24px;
+    box-shadow: $mainBoxShadowLight;
+    h1 {
+      font-size: 32px;
+      font-weight: lighter;
+      font-family: $bebas;
+    }
+    .titleIcon {
+      font-size: 32px;
+    }
+  }
+  form {
+    color: $mainFontColorLight;
+    background-color: $secondaryBackgroundColorLight;
+    box-shadow: $mainBoxShadowLight;
+    border-radius: $mainBorderRadius;
+    border: $mainBorderLight;
+    margin: 32px;
+    padding: 14px 24px;
+    @include d-flex(center, center, column, 16px);
+    .formItem {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(10, 1fr);
+      label {
+        grid-column: span 2;
+        font-size: 24px;
+        font-weight: lighter;
+        font-family: $bebas;
+      }
+
+      input {
+        grid-column: span 7;
+        border-radius: $mainBorderRadius;
+        border: $mainBorderLight;
+        outline: none;
+        padding: 4px 8px;
+        color: $mainFontColorLight;
+        caret-color: $mainFontColorLight;
+        &::placeholder {
+          color: $mainFontColorLight;
+        }
+      }
+      .actionBtn {
+        grid-column: span 1;
+        justify-self: center;
+        width: 100%;
+        @include d-flex(center, space-evenly, row);
+        .addIcon,
+        .deleteIcon {
+          @include d-flex(center, center);
+          background-color: $mainBackgroundColorLight;
+          color: $mainFontColorLight;
+          padding: 4px;
+          border: $mainBorderLight;
+          border-radius: $mainBorderRadius;
+          transition: $transition;
+          cursor: pointer;
+          &:hover {
+            color: $mainBackgroundColorLight;
+            background-color: $mainFontColorLight;
+          }
+          &.disabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    button {
+      color: $mainFontColorLight;
+      background-color: $mainBackgroundColorLight;
+      border: $mainBorderLight;
+      border-radius: $mainBorderRadius;
+      padding: 4px 32px;
+      font-size: 24px;
+      font-family: $bebas;
+      font-weight: lighter;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        color: $mainBackgroundColorLight;
+        background-color: $mainFontColorLight;
+      }
+    }
+  }
+}

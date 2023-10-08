@@ -1,0 +1,137 @@
+@import "../../styles/_variables.scss";
+
+a {
+  text-decoration: none;
+}
+.sidebar {
+  min-height: 100vh;
+  height: 100%;
+  border-right: $mainBorderLight;
+  background-color: $secondaryBackgroundColorLight;
+  .top {
+    height: 128px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: $mainBorderLight;
+    .logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      img {
+        width: 64px;
+        height: 64px;
+      }
+      h1 {
+        font-size: 24px;
+        font-family: $bebas;
+        font-weight: lighter;
+        color: $mainFontColorLight;
+      }
+    }
+  }
+  .center {
+    display: flex;
+    flex-direction: column;
+    .center-top {
+      margin-top: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding-bottom: 32px;
+      border-bottom: $mainBorderLight;
+      img {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+      h2 {
+        color: $mainFontColorLight;
+        font-size: 32px;
+        font-family: $bebas;
+        font-weight: lighter;
+      }
+      p {
+        text-align: center;
+        color: $mainFontColorHoverLight;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    .center-bottom {
+      padding: 16px;
+      border-bottom: $mainBorderLight;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        .title {
+          font-size: 32px;
+          font-weight: lighter;
+          color: $mainFontColorLight;
+          font-family: $bebas;
+          margin-top: 24px;
+          margin-bottom: 8px;
+        }
+        li {
+          display: flex;
+          align-items: center;
+          padding: 8px;
+          cursor: pointer;
+          transition: $transition;
+          color: $mainFontColorLight;
+          &:hover {
+            background-color: $mainFontColorLight;
+            color: $mainBackgroundColorLight;
+          }
+          &:hover .icon {
+            color: $mainBackgroundColorLight;
+          }
+          .icon {
+            font-size: 24px;
+            color: $mainFontColorLight;
+          }
+          a {
+            display: flex;
+            align-items: center;
+          }
+          span {
+            font-size: 16px;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin-left: 8px;
+          }
+          a:visited {
+            color: inherit;
+          }
+        }
+      }
+    }
+  }
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 32px;
+    margin-bottom: 32px;
+    .color-option {
+      width: 24px;
+      height: 24px;
+      border-radius: 4px;
+      cursor: pointer;
+      &:nth-child(1) {
+        background-color: $mainBackgroundColorLight;
+        border: $mainBorderLight;
+      }
+      &:nth-child(2) {
+        background-color: $mainBackgroundColor;
+        border: $mainBorder;
+      }
+    }
+  }
+}

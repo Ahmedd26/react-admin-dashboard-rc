@@ -1,0 +1,212 @@
+@import "../../../styles/variables";
+@import "../../../styles/functions";
+.loading-spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $mainBackgroundColorLight;
+}
+.loading-spinner {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  border: 6px solid $mainFontColorHoverLight;
+  border-left-color: $secondaryBackgroundColorLight;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.errorLoading {
+  min-width: 100vw;
+  min-height: 100vh;
+  background-color: $mainFontColorLight;
+  color: $mainBackgroundColorLight;
+  @include d-flex(center, center, column, 32px);
+  p {
+    font-size: 32px;
+    font-weight: lighter;
+    font-family: $bebas;
+  }
+  .errorIcon {
+    font-size: 128px;
+  }
+  a {
+    color: $mainBackgroundColorLight;
+    font-size: 24px;
+    font-weight: lighter;
+    font-family: $bebas;
+    transition: $transition;
+    background-color: transparent;
+    animation: jump 5s ease-in-out infinite;
+
+    &:hover {
+      animation: none;
+      transform: scale(1.1);
+    }
+
+    @keyframes jump {
+      0% {
+        transform: translateY(0);
+      }
+      25% {
+        transform: translateY(-10px);
+      }
+      50% {
+        transform: translateY(0);
+      }
+      75% {
+        transform: translateY(-10px);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+  }
+}
+.viewLicenses {
+  background-color: $mainBackgroundColorLight;
+  .LicensesContent {
+    padding: 32px;
+    .titles {
+      @include d-flex(stretch, center, row, 16px);
+      margin-bottom: 32px;
+
+      a {
+        @include d-flex(center, space-between, row);
+        width: 100%;
+        padding: 16px 24px;
+        background-color: $secondaryBackgroundColorLight;
+        color: $mainFontColorLight;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+        h1 {
+          font-size: 32px;
+          font-family: $bebas;
+          font-weight: lighter;
+        }
+        .titleIcon {
+          font-size: 32px;
+        }
+      }
+    }
+    .licensesContainer {
+      padding: 24px;
+      background-color: $secondaryBackgroundColorLight;
+      border: $mainBorderLight;
+      border-radius: $mainBorderRadius;
+      color: $mainFontColorLight;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 16px;
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      .license {
+        grid-column: span 4;
+        padding: 24px;
+        background-color: $mainBackgroundColorLight;
+        border: $mainBorderLight;
+        border-radius: $mainBorderRadius;
+        @include d-flex(center, center, column);
+        .top {
+          @include d-flex(flex-start, center, column, 16px);
+          width: 100%;
+          .licenseTitle {
+            flex: 1;
+            font-size: 26px;
+            font-family: $bebas;
+            font-weight: lighter;
+            width: 100%;
+          }
+          .licenseDescription {
+            font-size: 14px;
+            overflow-wrap: break-word;
+            width: 100%;
+            margin-bottom: 8px;
+            padding-bottom: 8px;
+            border-bottom: $mainBorderLight;
+            color: $mainFontColorHoverLight;
+            font-weight: 500;
+          }
+        }
+        .middle {
+          flex: 8;
+
+          width: 100%;
+          @include d-flex(flex-start, flex-start, column, 8px);
+          .feature {
+            font-size: 26px;
+            font-family: $bebas;
+            font-weight: lighter;
+            width: 100%;
+          }
+          ul {
+            width: 100%;
+
+            li {
+              text-transform: uppercase;
+              font-weight: 600;
+              color: $mainFontColorHoverLight;
+              margin-bottom: 4px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+        .bottom {
+          flex: 1;
+          border-top: $mainBorderLight;
+          padding-top: 16px;
+          width: 100%;
+          @include d-flex(center, space-between, column, 16px);
+          .priceAndFiles {
+            @include d-flex(center, space-between, row);
+            width: 100%;
+            .price,
+            .files {
+              width: 100%;
+              h3 {
+                font-size: 24px;
+                font-weight: lighter;
+                font-family: $bebas;
+              }
+              p {
+                font-weight: bold;
+                color: $mainFontColorHoverLight;
+              }
+            }
+          }
+          .buttons {
+            border: $mainBorderLight;
+            border-radius: $mainBorderRadius;
+            background-color: $secondaryBackgroundColorLight;
+            color: $mainFontColorLight;
+            @include d-flex(center, space-evenly, row);
+            width: 100%;
+            .licenseButton {
+              font-size: 32px;
+              cursor: pointer;
+              a {
+                color: $mainFontColorLight;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
